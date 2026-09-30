@@ -17,9 +17,21 @@ Projeto de testes funcionais e exploratórios sobre o fluxo de login e recupera�
 
 [Acessar o projeto](./orangehrm-manual-testing/)
 
+### 2. Conduit — Testes de API com Postman
+
+Projeto de estudo com seis solicitações encadeadas: registro, login, criação de artigo e comentário, e exclusão dos recursos criados.
+
+- Validação de status HTTP e propriedades das respostas
+- Scripts de testes em JavaScript
+- Variáveis de coleção para e-mail, token, slug e ID do comentário
+- Dados aleatórios para cada novo registro
+- Runner: 3 iterações, 30 testes aprovados e 0 falhas
+
+[Acessar o projeto](./conduit-api-tests/)
+[Ver resultado do Runner](./conduit-api-tests/runner-results.png)
+
 ## Próximos projetos
 
-- Testes de API com Postman
 - Consultas SQL aplicadas a cenários de QA
 - Automação de testes com Playwright
 
