@@ -1,0 +1,383 @@
+{
+  "info": {
+    "_postman_id": "15825010-3f9e-4251-9826-02b92abd3ea3",
+    "name": "Postman extended [Luana Flores Dela Piccolla]",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Registro",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 200', () => {\r",
+              "  pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test('Response contains user properties', () => {\r",
+              "  const user = pm.response.json().user;\r",
+              "\r",
+              "  pm.expect(user).to.have.all.keys(\r",
+              "    'username', 'email', 'token', 'bio', 'image'\r",
+              "  );\r",
+              "});\r",
+              "\r",
+              "pm.collectionVariables.set(\r",
+              "  'emailConduit',\r",
+              "  pm.response.json().user.email\r",
+              ");"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"user\": {\r\n    \"username\": \"qa_{{$guid}}\",\r\n    \"email\": \"qa_{{$guid}}@example.com\",\r\n    \"password\": \"{{passwordConduit}}\"\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}users",
+          "host": [
+            "{{BASE_URL}}users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 200', () => {\r",
+              "  pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test('Response contains user properties', () => {\r",
+              "  const user = pm.response.json().user;\r",
+              "\r",
+              "  pm.expect(user).to.include.all.keys(\r",
+              "    'username', 'email', 'token', 'bio', 'image'\r",
+              "  );\r",
+              "  pm.expect(user.email).to.eql(\r",
+              "    pm.collectionVariables.get('emailConduit')\r",
+              "  );\r",
+              "  pm.expect(user.token).to.be.a('string').and.not.empty;\r",
+              "});\r",
+              "\r",
+              "if (pm.response.code === 200) {\r",
+              "  pm.collectionVariables.set(\r",
+              "    'tokenConduit',\r",
+              "    pm.response.json().user.token\r",
+              "  );\r",
+              "}"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"user\": {\r\n    \"email\": \"{{emailConduit}}\",\r\n    \"password\": \"{{passwordConduit}}\"\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}users/login",
+          "host": [
+            "{{BASE_URL}}users"
+          ],
+          "path": [
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Criar um artigo",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 200', () => {\r",
+              "  pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test('Response contains article properties', () => {\r",
+              "  const article = pm.response.json().article;\r",
+              "\r",
+              "  pm.expect(article).to.include.all.keys(\r",
+              "    'slug', 'title', 'description', 'body', 'tagList',\r",
+              "    'createdAt', 'updatedAt', 'favorited',\r",
+              "    'favoritesCount', 'author'\r",
+              "  );\r",
+              "\r",
+              "  pm.expect(article.slug).to.be.a('string').and.not.empty;\r",
+              "  pm.expect(article.author).to.include.all.keys(\r",
+              "    'username', 'bio', 'image', 'following'\r",
+              "  );\r",
+              "});\r",
+              "\r",
+              "if (pm.response.code === 200) {\r",
+              "  pm.collectionVariables.set(\r",
+              "    'slugConduit',\r",
+              "    pm.response.json().article.slug\r",
+              "  );\r",
+              "}"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Token {{tokenConduit}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"article\": {\r\n    \"title\": \"Teste QA {{$guid}}\",\r\n    \"description\": \"Artigo para teste de API\",\r\n    \"body\": \"Artigo criado pela coleção Postman extended.\",\r\n    \"tagList\": [\"qa\"]\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}articles",
+          "host": [
+            "{{BASE_URL}}articles"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Postar um comentário",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 200', () => {\r",
+              "  pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test('Response contains comment properties', () => {\r",
+              "  const comment = pm.response.json().comment;\r",
+              "\r",
+              "  pm.expect(comment).to.include.all.keys(\r",
+              "    'id', 'body', 'createdAt', 'updatedAt', 'author'\r",
+              "  );\r",
+              "  pm.expect(comment.body).to.eql(\r",
+              "    'Comentário de teste criado pelo Postman.'\r",
+              "  );\r",
+              "  pm.expect(comment.author).to.include.all.keys(\r",
+              "    'username', 'bio', 'image', 'following'\r",
+              "  );\r",
+              "});\r",
+              "\r",
+              "if (pm.response.code === 200) {\r",
+              "  pm.collectionVariables.set(\r",
+              "    'commentId',\r",
+              "    pm.response.json().comment.id\r",
+              "  );\r",
+              "}"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Token {{tokenConduit}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"comment\": {\r\n    \"body\": \"Comentário de teste criado pelo Postman.\"\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}articles/{{slugConduit}}/comments",
+          "host": [
+            "{{BASE_URL}}articles"
+          ],
+          "path": [
+            "{{slugConduit}}",
+            "comments"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Excluir um comentário",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 204', () => {\r",
+              "  pm.response.to.have.status(204);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Token {{tokenConduit}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{BASE_URL}}articles/{{slugConduit}}/comments/{{commentId}}",
+          "host": [
+            "{{BASE_URL}}articles"
+          ],
+          "path": [
+            "{{slugConduit}}",
+            "comments",
+            "{{commentId}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Excluir um artigo",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 204', () => {\r",
+              "  pm.response.to.have.status(204);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Token {{tokenConduit}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{BASE_URL}}articles/{{slugConduit}}",
+          "host": [
+            "{{BASE_URL}}articles"
+          ],
+          "path": [
+            "{{slugConduit}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "BASE_URL",
+      "value": "https://conduit.mate.academy/api/"
+    },
+    {
+      "key": "passwordConduit",
+      "value": ""
+    },
+    {
+      "key": "emailConduit",
+      "value": ""
+    },
+    {
+      "key": "tokenConduit",
+      "value": ""
+    },
+    {
+      "key": "slugConduit",
+      "value": ""
+    },
+    {
+      "key": "commentId",
+      "value": ""
+    }
+  ]
+}
