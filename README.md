@@ -36,6 +36,17 @@ Projeto de estudo com seis solicitações encadeadas: registro, login, criação
 
 [Ver projeto](./conduit-postman-practice-45/)
 
+### 4. Conduit Buffalo — Testes manuais em ambiente local
+
+Testes exploratórios da aplicação executada localmente com Buffalo e PostgreSQL em um container Docker.
+
+- Verificação de cadastro, navegação e apresentação visual
+- Dois bugs documentados e vinculados à Story no Jira
+- Passos para reprodução e resultados esperados e obtidos
+- Evidências com prints, logs do terminal e análise de requisições no DevTools
+
+[Acessar o projeto](https://github.com/LuanaFloresDelaPiccolla/qa-portfolio-luana/tree/main/conduit-buffalo-manual-testing)
+
 ## Próximos projetos
 
 - Consultas SQL aplicadas a cenários de QA
