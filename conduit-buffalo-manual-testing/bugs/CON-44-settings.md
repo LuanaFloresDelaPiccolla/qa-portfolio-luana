@@ -1,34 +1,34 @@
-﻿# CON-44 — Settings reloads the home page
+﻿# CON-44 — Settings recarrega a página inicial
 
-## Environment
-Windows with Ubuntu (WSL), Google Chrome.
-Buffalo running locally; PostgreSQL running in Docker.
-URL: http://127.0.0.1:3000
+## Ambiente
+Windows com Ubuntu (WSL) e Google Chrome.
+Buffalo executado localmente; PostgreSQL executado no Docker.
+Endereço: http://127.0.0.1:3000
 
-## Precondition
-The user is logged in.
+## Pré-condição
+O usuário está conectado à sua conta.
 
-## Steps to reproduce
-1. Open the home page.
-2. Click Settings in the navigation menu.
+## Passos para reproduzir
+1. Abrir a página inicial.
+2. Clicar em Settings no menu de navegação.
 
-## Actual result
-The home page reloads instead of opening account settings.
-The user cannot access profile editing through Settings.
+## Resultado obtido
+A página inicial é recarregada e as configurações da conta não são abertas.
+O usuário não consegue acessar a edição do perfil pelo link Settings.
 
-## Expected result
-The account settings page opens and allows the user to edit their profile.
+## Resultado esperado
+A página de configurações da conta é aberta e permite editar o perfil.
 
-## Supporting terminal log
-After clicking Settings, the terminal records:
+## Log do terminal
+Após o clique em Settings, o terminal registra:
 GET / — status 200
 
-This request is for the home page, rather than an account settings page.
+A requisição corresponde à página inicial, em vez de uma página de configurações.
 
-## Evidence
-- [Page after clicking Settings](../evidence/settings-result.png)
-- [Terminal log](../evidence/terminal-log.png)
+## Evidências
+- [Página após clicar em Settings](../evidence/settings-result.png)
+- [Log do terminal](../evidence/terminal-log.png)
 
 ## Jira
 Bug: CON-44
-Related story: CON-43
+Story relacionada: CON-43

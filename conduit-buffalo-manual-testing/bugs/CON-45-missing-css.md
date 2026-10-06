@@ -1,40 +1,40 @@
-﻿# CON-45 — Application pages appear unstyled
+﻿# CON-45 — Páginas da aplicação sem formatação
 
-## Environment
-Windows with Ubuntu (WSL), Google Chrome.
-Buffalo running locally; PostgreSQL running in Docker.
-URL: http://127.0.0.1:3000
+## Ambiente
+Windows com Ubuntu (WSL) e Google Chrome.
+Buffalo executado localmente; PostgreSQL executado no Docker.
+Endereço: http://127.0.0.1:3000
 
-## Steps to reproduce
-1. Open the application.
-2. Observe the page layout.
-3. Check the terminal logs and the browser Network tab.
+## Passos para reproduzir
+1. Abrir a aplicação.
+2. Observar a apresentação visual da página.
+3. Verificar os logs do terminal e a aba Network do navegador.
 
-## Actual result
-The page displays plain HTML without the expected styling.
-The local stylesheets buffalo.css and application.css return 404.
-The external stylesheet https://demo.productionready.io/main.css also returns 404.
+## Resultado obtido
+A página exibe HTML sem a formatação esperada.
+Os arquivos locais buffalo.css e application.css retornam 404.
+O arquivo externo https://demo.productionready.io/main.css também retorna 404.
 
-## Expected result
-The stylesheets load successfully, and the page displays its intended layout and formatting.
+## Resultado esperado
+Os arquivos CSS são carregados com sucesso e a página apresenta o layout e a formatação previstos.
 
-## Terminal log excerpts
-These excerpts were transcribed from the terminal screenshot:
+## Trechos dos logs do terminal
+Trechos transcritos do print do terminal:
 
 could not find assets/buffalo.css status=404
 could not find assets/application.css status=404
 
-## Browser evidence
-The Network tab shows a GET request to:
+## Evidência do navegador
+A aba Network mostra uma requisição GET para:
 https://demo.productionready.io/main.css
 
-Response: 404 Not Found.
+Resposta: 404 Not Found.
 
-## Evidence
-- [Unstyled page](../evidence/settings-result.png)
-- [Terminal errors](../evidence/terminal-log.png)
-- [External stylesheet 404 response](../evidence/main-css-404.png)
+## Evidências
+- [Página sem formatação](../evidence/settings-result.png)
+- [Erros no terminal](../evidence/terminal-log.png)
+- [Resposta 404 do CSS externo](../evidence/main-css-404.png)
 
 ## Jira
 Bug: CON-45
-Related story: CON-43
+Story relacionada: CON-43
