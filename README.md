@@ -30,6 +30,12 @@ Projeto de estudo com seis solicitações encadeadas: registro, login, criação
 [Acessar o projeto](./conduit-api-tests/)
 [Ver resultado do Runner](./conduit-api-tests/runner-results.png)
 
+### 3. Conduit — Postman Practice
+
+45 requisições de API com testes em JavaScript, preparação de dados e dois bugs registrados no Jira.
+
+[Ver projeto](./conduit-postman-practice-45/)
+
 ## Próximos projetos
 
 - Consultas SQL aplicadas a cenários de QA
