@@ -1,0 +1,22 @@
+﻿Feature,Guest,Candidate,Recruiter,Basis / validation
+View public pages,Allowed,Allowed,Allowed,Expected permission; execution pending. Roles and activation prerequisites apply.
+View candidate cards,Allowed,Allowed,Allowed,Expected permission; execution pending. Roles and activation prerequisites apply.
+Use candidate filters,Login required,Allowed,Allowed,Expected permission; execution pending. Roles and activation prerequisites apply.
+View candidate experience,Allowed,Allowed,Allowed,Expected permission; execution pending. Roles and activation prerequisites apply.
+Start a chat with a candidate,Login required,Recruiter profile required,Allowed,Expected permission; execution pending. Roles and activation prerequisites apply.
+View own chats,Login required,Allowed,Allowed,Expected permission; execution pending. Roles and activation prerequisites apply.
+Send messages in existing chats,Login required,Allowed,Allowed,Expected permission; execution pending. Roles and activation prerequisites apply.
+Share or decline contact details,Not allowed,Allowed,Not applicable,Expected permission; execution pending. Roles and activation prerequisites apply.
+Send an offer or rejection,Not allowed,Not applicable,Allowed,Expected permission; execution pending. Roles and activation prerequisites apply.
+Archive or favorite own chats,Login required,Allowed,Allowed,Expected permission; execution pending. Roles and activation prerequisites apply.
+Create a candidate profile,Registration required,Allowed,Allowed,Expected permission; execution pending. Roles and activation prerequisites apply.
+Create a recruiter profile,Registration required,Allowed,Allowed,Expected permission; execution pending. Roles and activation prerequisites apply.
+Edit own profile,Login required,Allowed,Allowed,Expected permission; execution pending. Roles and activation prerequisites apply.
+Edit another user's profile,Not allowed,Not allowed,Not allowed,Expected permission; execution pending. Roles and activation prerequisites apply.
+Change own password,Login required,Allowed,Allowed,Expected permission; execution pending. Roles and activation prerequisites apply.
+Activate or deactivate own candidate profile,Not allowed,Allowed,Candidate profile required,Expected permission; execution pending. Roles and activation prerequisites apply.
+View another candidate's contact details,Not allowed,Not allowed,Only after sharing,Expected permission; execution pending. Roles and activation prerequisites apply.
+Apply for a job with one click,Login required,Allowed for authorized user,Allowed for authorized user,PDF states authorized users. A mandatory candidate profile is not specified; verify actual behavior.
+Use job skill filters,Login required,Allowed,Allowed,Expected permission; execution pending. Roles and activation prerequisites apply.
+Sign out,Not applicable,Allowed,Allowed,Expected permission; execution pending. Roles and activation prerequisites apply.
+Post a job manually or through ATS,Login required,Allowed for authorized user,Allowed for authorized user,PDF states authorized users; validate role restrictions before asserting a stricter rule.

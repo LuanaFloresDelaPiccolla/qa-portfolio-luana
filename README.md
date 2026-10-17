@@ -47,6 +47,17 @@ Testes exploratórios da aplicação executada localmente com Buffalo e PostgreS
 
 [Acessar o projeto](https://github.com/LuanaFloresDelaPiccolla/qa-portfolio-luana/tree/main/conduit-buffalo-manual-testing)
 
+### 5. Huntd — Testes manuais web e iOS
+
+Projeto de estudo de uma plataforma de recrutamento, com planejamento, permissões, rastreabilidade e relatos de bugs.
+
+- 32 casos agrupados web reutilizados em Chrome e Safari, e 14 casos iOS
+- Resultados separados por ambiente, com falhas e bloqueios documentados
+- 16 relatos de bugs com passos e resultados esperados e obtidos
+- Documentação pública que pode ser consultada sem acesso ao Jira ou TestRail
+
+[Acessar o projeto](./huntd-manual-testing/)
+
 ## Próximos projetos
 
 - Consultas SQL aplicadas a cenários de QA

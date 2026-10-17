@@ -1,0 +1,29 @@
+﻿Requirement ID,Module,Requirement,Priority,Draft Case IDs,Jira Story,Bug IDs
+WEB-01,Main pages,Engineer and company landing pages; links and navigation,Medium,"WEB-TC-001, WEB-TC-002",HUNT-13,
+WEB-02,Main pages,Feedback and authorized-user banners,Low,"WEB-TC-003, WEB-TC-001",HUNT-13,HUNT-23
+WEB-03,Candidates,"Candidate cards, achievements and experience",High,WEB-TC-004,HUNT-6,HUNT-24
+WEB-04,Candidates,"Role, technology, salary, English and location filters",High,"WEB-TC-006, WEB-TC-007",HUNT-6,"HUNT-25, HUNT-26"
+WEB-05,Candidates,Guest restrictions and candidate profile access,High,"WEB-TC-005, WEB-TC-004, WEB-TC-008",HUNT-6,
+WEB-06,Registration,Email and social registration; role selection,Critical,"WEB-TC-009, WEB-TC-010",HUNT-8,
+WEB-07,Recruiter profile,Company details and contact information,High,WEB-TC-011,HUNT-8,HUNT-27
+WEB-08,Candidate profile,Role and 5–15 technology skills,High,WEB-TC-012,HUNT-9,HUNT-28
+WEB-09,Candidate profile,"Salary, experience, English, location and employment preferences",High,WEB-TC-012,HUNT-9,HUNT-28
+WEB-10,Candidate profile,LinkedIn import and manual experience entry,High,"WEB-TC-012, WEB-TC-013",HUNT-9,HUNT-28
+WEB-11,Candidate profile,Achievements and expectations,Medium,WEB-TC-012,HUNT-9,HUNT-28
+WEB-12,Candidate profile,"Avatar, name, CV and social links",High,"WEB-TC-012, WEB-TC-013",HUNT-9,HUNT-28
+WEB-13,Candidate profile,Profile submission and activation review,High,WEB-TC-012,HUNT-9,HUNT-28
+WEB-14,Authentication,Sign in and navigation,Critical,"WEB-TC-014, WEB-TC-015",HUNT-7,
+WEB-15,Authentication,Password recovery,High,WEB-TC-016,HUNT-7,HUNT-29
+WEB-16,Chats,Recruiter starts a conversation,High,"WEB-TC-017, WEB-TC-008",HUNT-11,
+WEB-17,Chats,Candidate shares or declines contact details,High,"WEB-TC-018, WEB-TC-019",HUNT-11,
+WEB-18,Chats,Recruiter sends an offer or rejection,High,WEB-TC-020,HUNT-11,HUNT-30
+WEB-19,Chats,Archive and favorite conversations,Medium,WEB-TC-021,HUNT-11,HUNT-31
+WEB-20,Profiles,"Create, edit and switch candidate/recruiter profiles",High,"WEB-TC-023, WEB-TC-022",HUNT-12,HUNT-32
+WEB-21,Settings,Social connections and password change,High,"WEB-TC-024, WEB-TC-025",HUNT-12,
+WEB-22,Profiles,Activate and deactivate candidate availability,High,WEB-TC-025,HUNT-12,
+WEB-23,Footer,"Company, job, social and information links",Low,"WEB-TC-026, WEB-TC-027",HUNT-13,
+WEB-24,Companies,"Top 100 company groups, counters and vacancy links",Medium,WEB-TC-028,HUNT-14,HUNT-33
+WEB-25,Jobs,Job listing and skill filters; guest restrictions,High,WEB-TC-029,HUNT-15,HUNT-34
+WEB-26,Jobs,Manual and ATS job posting,High,WEB-TC-031,HUNT-15,
+WEB-27,Jobs,One-click job application,High,WEB-TC-030,HUNT-15,
+WEB-28,Jobs,"Job subscription by role, experience and email",Medium,WEB-TC-032,HUNT-15,
