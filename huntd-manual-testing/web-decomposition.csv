@@ -1,0 +1,31 @@
+﻿Module,Feature,What to test
+Main pages,For engineers,"Default page, email sign-up, social sign-up, Jobs and Web3 companies links"
+Main pages,For companies,"Recruiter landing page, candidate CTA, comparison, CEO quotes and partner logos"
+Main pages,Feedback and authorized view,At least 10 real testimonials; app banner replaces sign-up for logged-in users
+Candidates,Candidate list,"Cards, achievements, expanded experience and profile opening in a new tab"
+Candidates,Filters,"Role, technologies, salary, English level, location and time zone"
+Candidates,Guest permissions,Filters visible; use requires authentication; sign-in/sign-up prompts
+Candidates,Candidate profile,Experience ordered oldest to newest; contacts hidden until shared
+Sign-up,Account registration,"Email and password, Google, LinkedIn and GitHub; candidate/recruiter selection"
+Sign-up,Recruiter registration,"Position, company, contacts and redirect to candidate list"
+Sign-up,Candidate role,Role selection and 5–15 technologies
+Sign-up,Candidate expectations,"Experience, salary period, USD/EUR, English level and location"
+Sign-up,Candidate experience,Experience details and LinkedIn import
+Sign-up,Candidate bio,Achievements and expectations
+Sign-up,Candidate contacts,"Avatar, full name, CV and social links"
+Sign-up,Candidate activation,Pending activation state and stated 24–48-hour activation period
+Sign-in,Authentication,Valid/invalid login and navigation to sign-up and password recovery
+Sign-in,Password recovery,Recovery request and password reset
+Chats,Start conversation,Recruiter starts chat from candidate list/profile; candidate-role warning
+Chats,Contact sharing,Candidate shares or declines contacts; recruiter visibility
+Chats,Job offer,Recruiter sends offer or rejection
+Chats,Chat management,Both roles archive and favorite conversations
+Profiles,Role management,"Create the other role, switch roles and edit both profiles"
+Profiles,Account settings,Connect social accounts and change password
+Profiles,Candidate availability,Activate and deactivate candidate profile
+Footer,Navigation,"Top 5 Web3 companies, vacancy columns, social links, pricing, FAQ and About"
+Companies,Top 100 Web3 companies,"Groups of 10, counters and company links opening vacancies in a new tab"
+Jobs,Job listing and filters,"Vacancies, skills filters and guest View More authentication prompt"
+Jobs,Job posting,Manual posting and ATS import for authorized users
+Jobs,Job application,One-click application
+Jobs,Subscription,"Role, experience and email subscription fields"

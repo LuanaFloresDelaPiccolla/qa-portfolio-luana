@@ -1,0 +1,71 @@
+﻿Bug ID,Platform,Summary,Preconditions,Steps,Actual Result,Expected Result,Severity,Priority,Environment
+HUNT-3,iOS,Location search returns no results and blocks candidate profile setup,Owned candidate account; Role stage completed.,"1. Open Profile > Candidate.
+2. Complete Role.
+3. Fill Expectations.
+4. Search Brazil, São Paulo and London.
+5. Try Save and continue.","Location search returns no results and profile setup cannot continue, including reported Remote attempt.",Supported location matches appear and valid setup can continue.,Major,High,iPhone 15 Plus; iOS 26.6.2; Huntd 1.2.6.22
+HUNT-5,Web,Candidates page fails to load after clicking View candidates,Owned newly created recruiter account.,"1. Complete recruiter onboarding.
+2. Select View candidates.
+3. Refresh.","Client-side exception displayed; after refresh, Luana reports error 500.",Candidate list or meaningful empty state loads.,Major,High,"Windows 10 Pro 22H2 build 19045.6466; Chrome 154.0.8037.98 reported, updated version pending"
+HUNT-21,iOS,Password recovery email is not received after confirmation,Owned registered account.,"1. Open password recovery from the app.
+2. Submit the registered email.
+3. Check inbox and spam.","The app opens a web page displaying “We sent you a link to reset your password by email”, but no recovery email is received in the inbox or spam folder.",A recovery email arrives and provides a usable password reset link.,Major,High,iPhone 15 Plus / iOS 26.6.2 / Huntd 1.2.6.22
+HUNT-22,iOS,Desired position and Employment options are cleared after returning from Expectations,Owned candidate account; Role fields populated.,"1. Fill Role fields.
+2. Continue to Expectations.
+3. Return using the app back arrow.",Desired position and Employment options are cleared after returning from Expectations using the app's back arrow.,Previously entered Role values remain selected.,Major,High,iPhone 15 Plus / iOS 26.6.2 / Huntd 1.2.6.22
+HUNT-23,Web,Testimonials carousel shows fewer than 10 distinct testimonials,Open Huntd web landing page.,"1. Open the Huntd web landing page.
+2. Scroll to the testimonials section.
+3. Review all carousel testimonials.
+4. Count only distinct testimonials, excluding duplicate slides.",Only 5 distinct testimonials are available; other carousel slides are duplicates.,At least 10 distinct testimonials should be displayed.,Minor,Medium,Windows 10 Pro 22H2; Chrome 154.0.8037.98 (64-bit)
+HUNT-24,Web,Candidate experience is displayed in reverse chronological order,Recruiter account; candidate with multiple work experiences.,"1. Log in as recruiter.
+2. Open Candidates.
+3. Open a candidate with multiple experiences.
+4. Review experience order.",Experience entries are displayed from newest to oldest.,Experience entries should be displayed from oldest to newest.,Minor,Medium,Windows 10 Pro 22H2; Chrome 154.0.8037.98 (64-bit)
+HUNT-25,Web,Technology filter clears selected option instead of applying it,Activated recruiter account.,"1. Log in as recruiter.
+2. Open Candidates.
+3. Open technology filter.
+4. Search Solidity.
+5. Select Solidity.
+6. Observe field and results.",The selected technology is cleared and the filter is not applied.,Solidity should remain selected and filter the candidate list.,Major,High,Windows 10 Pro 22H2; Chrome 154.0.8037.98 (64-bit)
+HUNT-26,Web,Location filter returns no selectable options,Activated recruiter account.,"1. Log in as recruiter.
+2. Open Candidates.
+3. Open location filter.
+4. Search Brazil.
+5. Repeat with London.",No selectable location options are returned.,Valid locations should appear and be selectable as filters.,Major,High,Windows 10 Pro 22H2; Chrome 154.0.8037.98 (64-bit)
+HUNT-27,Web,Recruiter onboarding does not complete as expected,Owned recruiter account.,"1. Start recruiter onboarding.
+2. Fill required recruiter information.
+3. Continue through role, technologies, salary, experience, English and location.
+4. Attempt completion.",The recruiter onboarding flow does not complete according to the expected flow.,All required onboarding steps should complete and open the Candidates page.,Major,High,Windows 10 Pro 22H2; Chrome 154.0.8037.98 (64-bit)
+HUNT-28,Web,Candidate onboarding does not fully match expected requirements,Owned candidate account.,"1. Complete Role.
+2. Complete Expectations.
+3. Add experience.
+4. Complete Bio and Contacts.
+5. Submit profile.
+6. Review fields and completion messages.","Expected requirements are inconsistent or missing, including EUR salary option, experience date handling and activation/review information.","All required fields/options should be available, saved correctly and expected review information displayed.",Major,High,Windows 10 Pro 22H2; Chrome 154.0.8037.98 (64-bit)
+HUNT-29,Web,Password recovery email is not received,Owned registered account.,"1. Open sign-in page.
+2. Click Forgot password.
+3. Enter a valid registered email.
+4. Submit request.
+5. Check inbox and spam.","The recovery request is accepted, but no password reset email is received.",A password reset email should be delivered to the registered email address.,Major,High,Windows 10 Pro 22H2; Chrome 154.0.8037.98 (64-bit)
+HUNT-30,Web,Send offer action is missing in recruiter chat,Recruiter account with an existing candidate conversation.,"1. Log in as recruiter.
+2. Open a candidate conversation.
+3. Inspect chat actions/status controls.
+4. Look for Send offer.","Hire candidate, Reject candidate, Archive/Unarchive and Delete are available, but Send offer is missing.",Recruiter should be able to send a job offer from the chat.,Major,High,Windows 10 Pro 22H2; Chrome 154.0.8037.98 (64-bit)
+HUNT-31,Web,Favourite chat action is missing for candidate and recruiter,Controlled candidate/recruiter chats.,"1. Log in as candidate.
+2. Open active or archived chat.
+3. Inspect actions.
+4. Repeat as recruiter.","Archive/Unarchive and Delete are available, but no Favourite action is present.",Both roles should be able to mark a chat as favourite and retain that state.,Minor,Medium,Windows 10 Pro 22H2; Chrome 154.0.8037.98 (64-bit)
+HUNT-32,Web,User cannot create or switch to a second role,Account with only one role created.,"1. Log in.
+2. Open Profile.
+3. Open Account settings if applicable.
+4. Look for create-missing-role option.
+5. Check for role switch control.",No option to create the second role or switch between Candidate and Recruiter is available.,User should be able to create the missing role and switch between Candidate and Recruiter profiles.,Major,High,Windows 10 Pro 22H2; Chrome 154.0.8037.98 (64-bit)
+HUNT-33,Web,Telegram and Signal links are missing from the footer,Open Huntd website.,"1. Open Huntd website.
+2. Scroll to footer.
+3. Review social links.
+4. Check for Telegram and Signal.","LinkedIn, Facebook, Twitter and Instagram are present, but Telegram and Signal are missing.","Footer should include all expected social links, including Telegram and Signal.",Minor,Medium,Windows 10 Pro 22H2; Chrome 154.0.8037.98 (64-bit)
+HUNT-34,Web,Company links do not open vacancies in a new tab,Open Web3 companies page.,"1. Open Web3 companies page.
+2. Locate Coinbase.
+3. Click logo.
+4. Click company name.
+5. Observe navigation.",Logo opens vacancies in the current tab and the company name is not clickable.,Both logo and company name should open company vacancies in a new tab.,Minor,Medium,Windows 10 Pro 22H2; Chrome 154.0.8037.98 (64-bit)

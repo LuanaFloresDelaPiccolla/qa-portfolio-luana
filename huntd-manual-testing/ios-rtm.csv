@@ -1,0 +1,21 @@
+﻿Requirement ID,Module,Requirement,Priority,Draft Case IDs,Jira Story,Bug IDs
+IOS-01,Authentication,Email and password login,Critical,IOS-TC-001,HUNT-16,
+IOS-02,Authentication,Google login,High,IOS-TC-002,HUNT-16,
+IOS-03,Authentication,Apple login,High,IOS-TC-002,HUNT-16,
+IOS-04,Authentication,Password recovery,High,IOS-TC-003,HUNT-16,HUNT-21
+IOS-05,Registration,Email registration and password confirmation,Critical,IOS-TC-004,HUNT-16,
+IOS-06,Registration,Google registration,High,IOS-TC-005,HUNT-16,
+IOS-07,Registration,Apple registration,High,IOS-TC-005,HUNT-16,
+IOS-08,Navigation,Sign-up link and Chats/Profile navigation,Medium,IOS-TC-006,HUNT-17,
+IOS-09,Authentication,Sign out,High,IOS-TC-006,HUNT-16,
+IOS-10,Candidate profile,"Desired position, specialization and technology skills",High,IOS-TC-007,HUNT-4,HUNT-22
+IOS-11,Candidate profile,"Salary, experience and English level",High,IOS-TC-008,HUNT-4,HUNT-3
+IOS-12,Candidate profile,Location search and selection,High,IOS-TC-008,HUNT-4,HUNT-3
+IOS-13,Candidate profile,Remote/Office preferences and continuation,High,IOS-TC-008,HUNT-4,HUNT-3
+IOS-14,Recruiter profile,Role and company name display and editing,High,IOS-TC-009,HUNT-18,
+IOS-15,Recruiter profile,Name and social links; validation and saving,High,IOS-TC-009,HUNT-18,
+IOS-16,Preferences,Chat notification setting and persistence,Medium,IOS-TC-010,HUNT-19,
+IOS-17,Preferences,Privacy policy opens and return navigation works,Low,IOS-TC-011,HUNT-19,
+IOS-18,Chats,All conversations list and empty state,High,IOS-TC-012,HUNT-20,
+IOS-19,Chats,Conversation search with matching and nonmatching text,Medium,IOS-TC-013,HUNT-20,
+IOS-20,Chats,Archive list and archived conversations,Medium,IOS-TC-014,HUNT-20,
